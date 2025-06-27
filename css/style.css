@@ -1,0 +1,45 @@
+/* Importação da Fonte do Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Estilos Globais */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Estilos de Componentes Personalizados que complementam o Bootstrap */
+.card {
+    border: none;
+    border-radius: 0.75rem; /* 12px */
+}
+
+.day-column {
+    background-color: #f8f9fa; /* Cinza claro do Bootstrap */
+    border-radius: 0.75rem; /* 12px */
+}
+
+/* Visibilidade do botão de apagar ao passar o mouse */
+.task-item:hover .delete-btn {
+    opacity: 1 !important; /* Usando !important para garantir a sobreposição */
+}
+
+.delete-btn {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+/* Animação de entrada suave para os cartões */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
